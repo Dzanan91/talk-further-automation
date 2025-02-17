@@ -26,7 +26,8 @@ def browser():
 def browser_context(browser):
     """Set up a fresh browser context for each test to avoid shared session data."""
     context = browser.new_context(
-        viewport={"width": 1920, "height": 1080}
+        viewport={"width": 2560, "height": 1440},
+        record_video_dir="videos" 
     )
     yield context
     context.close()  # Ensures cookies, cache, and storage are cleared

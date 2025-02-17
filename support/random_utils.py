@@ -33,7 +33,7 @@ def generate_user_details():
 
     # Generate a phone number and remove non-digit characters
     raw_phone = fake.phone_number()
-    digits_only = re.sub(r'\D', '', raw_phone)  # Remove non-numeric characters
+    digits_only = re.sub(r'\D', '', raw_phone) 
 
     # Ensure 10 digits for a valid number
     if len(digits_only) == 10:

@@ -16,7 +16,7 @@ def browser():
     """Set up the Playwright browser."""
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=False, 
+            headless=True, 
             args=["--window-size=1920,1080"]
         )
         yield browser

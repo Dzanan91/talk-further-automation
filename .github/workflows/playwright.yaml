@@ -47,3 +47,11 @@ jobs:
           name: pytest-report
           path: reports/
           retention-days: 30
+      
+      - name: Upload Playwright Videos
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-videos
+          path: videos/
+          retention-days: 30

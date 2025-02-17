@@ -21,7 +21,7 @@ Ensure you have **Python 3.10+** and **Node.js** (for Playwright) installed.
 
 #### **Clone the repository:**
 ```sh
-git clone [https://github.com/your-repo/talk-further-automation.git](https://github.com/Dzanan91/talk-further-automation.git)
+git clone https://github.com/Dzanan91/talk-further-automation.git
 cd talk-further-automation
 ```
 

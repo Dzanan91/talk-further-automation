@@ -16,7 +16,7 @@ def browser():
     """Set up the Playwright browser."""
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=True, 
+            headless=False, 
             args=["--window-size=1920,1080"]
         )
         yield browser
@@ -26,8 +26,8 @@ def browser():
 def browser_context(browser):
     """Set up a fresh browser context for each test to avoid shared session data."""
     context = browser.new_context(
-        viewport={"width": 1920, "height": 1080},
-        record_video_dir="videos"  # This tells Playwright to record videos in the "videos" folder
+        viewport={"width": 2560, "height": 1440},
+        record_video_dir="videos" 
     )
     yield context
     context.close()  # Ensures cookies, cache, and storage are cleared

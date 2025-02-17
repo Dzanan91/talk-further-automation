@@ -38,7 +38,7 @@ jobs:
       - name: Run Pytest Tests and generate HTML report
         run: |
           mkdir -p reports
-          pytest --maxfail=1 --disable-warnings -v --html=reports/report.html --self-contained-html
+          xvfb-run pytest --maxfail=1 --disable-warnings -v --html=reports/report.html --self-contained-html
           
       - name: Upload Test Report
         if: ${{ always() }}
